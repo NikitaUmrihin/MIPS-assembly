@@ -1,16 +1,16 @@
 	
-#	void main(void)
-#	{
-#		int num = 5;
-	addi $a0, $zero, -5
+					#	void main(void)
+					#	{
+					#		int num = 5;
+addi $a0, $zero, -5
 
-#		squared (num)
+					#		squared (num)
 	jal squared
 main_loop:
 	j main_loop
-#	}
-#	
-#	
+					#	}
+					#	
+					#	
 
 
 		
