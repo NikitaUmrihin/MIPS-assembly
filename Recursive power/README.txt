@@ -1,0 +1,1 @@
+A recursive program that receives two numbers, raises one to the power of the other.
