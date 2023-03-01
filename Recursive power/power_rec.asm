@@ -11,19 +11,19 @@ bne $a1 $zero pow_rec   	# if (m = 0)
 addi $v0 $zero 1		#	return 1
 jr $ra
 pow_rec:
-addi $sp $sp -12			# make room in memory
-sw $a0 0($sp)				# save a
-sw $a1 4($sp)				# save m
-sw $ra 8($sp)				# save ra 
+addi $sp $sp -12		# make room in memory
+sw $a0 0($sp)			# save a
+sw $a1 4($sp)			# save m
+sw $ra 8($sp)			# save ra 
 
 
 addi $a1 $a1 -1
 jal power			# int pow_res = power(a, m-1)
 addi $a0 $v0 0			# x = pow_res
-lw $a1 0($sp)				# a = m
+lw $a1 0($sp)			# a = m
 jal multiply			# int mult_res = multiply( x , a )
-lw $ra 8($sp)				# load ra
-addi $sp $sp 12				# point back to correct location
+lw $ra 8($sp)			# load ra
+addi $sp $sp 12			# point back to correct location
 jr $ra				# return mult_res
 
 
